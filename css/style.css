@@ -1,0 +1,78 @@
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* corpo */
+.main-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+#slider{
+    height: 30vw;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+}
+.items-container, .thumbs-container{
+    height: 100%;
+    position: relative;
+}
+.items-container{
+    width: 70%;
+}
+.items-container .title{
+    position: absolute;
+    color: white;
+    z-index: 1000;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    padding: 10px;
+}
+.item{
+    display: none;
+    height: 100%;
+}
+.item.active{
+    display: block;
+}
+.thumb{
+    height: 20%;
+    opacity: 0.5;
+}
+.thumb.active{
+    border: 3px solid white;
+    opacity: 1;
+}
+.item img, .thumb img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.up, .down{
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+.up{
+    top: 10px;
+}
+.down{
+    bottom: 10px;
+}
+.arrow{
+    font-size: 1.5em;
+    color: gray;
+}
+#slider .fa-circle-chevron-down,
+#slider .fa-circle-chevron-up{
+    cursor: pointer;
+}
