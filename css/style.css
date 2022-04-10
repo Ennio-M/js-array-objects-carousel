@@ -4,11 +4,16 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    font-size: 24px;
+}
 /* corpo */
 .main-container{
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    gap: 2.5em;
     justify-content: center;
     align-items: center;
     background-color: black;
@@ -55,24 +60,9 @@
     width: 100%;
     object-fit: cover;
 }
-.up, .down{
-    position: absolute;
-    z-index: 10;
-    text-align: center;
-    width: 100%;
-    color: white;
-}
-.up{
-    top: 10px;
-}
-.down{
-    bottom: 10px;
-}
-.arrow{
-    font-size: 1.5em;
-    color: gray;
-}
-#slider .fa-circle-chevron-down,
-#slider .fa-circle-chevron-up{
+button{
+    font-size: .7em;
+    padding: .7em;
+    border-radius: 10px;
     cursor: pointer;
 }
